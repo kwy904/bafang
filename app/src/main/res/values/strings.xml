@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">八方播客</string>
+    <string name="setting">设置</string>
+    <string name="timing">定时停止</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_download">下载</string>
+</resources>

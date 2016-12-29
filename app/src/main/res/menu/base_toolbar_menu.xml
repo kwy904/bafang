@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/ic_search_white_24dp"
+        android:title="@string/menu_search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_download"
+        android:icon="@mipmap/ic_file_download_white_24dp"
+        android:title="@string/menu_download"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_item1"
+        android:title="@string/timing"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item2"
+        android:title="@string/setting"
+        app:showAsAction="never" />
+</menu>
