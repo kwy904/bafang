@@ -13,7 +13,7 @@ import com.gd123.bafang.R;
  * Created by ywk on 2016/12/29 16:52
  */
 
-public class SubscriptionFragment extends Fragment{
+public class SubscriptionFragment extends BaseFragment{
 
     @Nullable
     @Override

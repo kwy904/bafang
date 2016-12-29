@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.gd123.bafang.adapter.Main_tab_Adapter;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
-
+    public LinearLayout mToolbarContainer;
     private TabLayout tab_FindFragment_title;                            //定义TabLayout
     private ViewPager vp_FindFragment_pager;                             //定义viewPager
     private FragmentPagerAdapter fAdapter;                               //定义adapter
@@ -31,7 +32,7 @@ public class MainActivity extends BaseActivity {
     private RecommendFragment recommendFragment;
     private SubscriptionFragment subscriptionFragment;
 
-
+    public  Toolbar mMainToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,7 @@ public class MainActivity extends BaseActivity {
 
     private void initControls() {
 
-
+        mToolbarContainer = (LinearLayout) findViewById(R.id.toolbarContainer);
         tab_FindFragment_title = (TabLayout)findViewById(R.id.tab_FindFragment_title);
         vp_FindFragment_pager = (ViewPager) findViewById(R.id.vp_FindFragment_pager);
 
@@ -85,13 +86,13 @@ public class MainActivity extends BaseActivity {
 
     private void initToolBar() {
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mMainToolbar = (Toolbar) findViewById(R.id.toolbar);
 
 //        toolbar.setNavigationIcon(R.mipmap.ic_launcher);//设置导航栏图标
 //        toolbar.setLogo(R.mipmap.ic_launcher);//设置app logo
-        toolbar.setTitle(R.string.app_name);//设置主标题
-        toolbar.inflateMenu(R.menu.base_toolbar_menu);//设置右上角的填充菜单
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        mMainToolbar.setTitle(R.string.app_name);//设置主标题
+        mMainToolbar.inflateMenu(R.menu.base_toolbar_menu);//设置右上角的填充菜单
+        mMainToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 int menuItemId = item.getItemId();
