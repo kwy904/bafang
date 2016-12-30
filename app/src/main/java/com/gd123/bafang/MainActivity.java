@@ -50,14 +50,14 @@ public class MainActivity extends BaseActivity {
         vp_FindFragment_pager = (ViewPager) findViewById(R.id.vp_FindFragment_pager);
 
         //初始化各fragment
-        classifyFragment = new ClassifyFragment();
         recommendFragment = new RecommendFragment();
+        classifyFragment = new ClassifyFragment();
         subscriptionFragment = new SubscriptionFragment();
 
         //将fragment装进列表中
         list_fragment = new ArrayList<>();
-        list_fragment.add(classifyFragment);
         list_fragment.add(recommendFragment);
+        list_fragment.add(classifyFragment);
         list_fragment.add(subscriptionFragment);
 
         //将名称加载tab名字列表，正常情况下，我们应该在values/arrays.xml中进行定义然后调用
