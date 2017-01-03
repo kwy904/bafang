@@ -30,5 +30,4 @@
         <item name="android:src">@mipmap/ic_more_vert_white_24dp</item>
     </style>
 
-    <color name="white">#ffffff</color>
 </resources>
